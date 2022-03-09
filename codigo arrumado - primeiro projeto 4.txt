@@ -1,0 +1,561 @@
+from telaCHAVE import *
+
+class MainWindow(QMainWindow):
+
+    def __init__(self):
+        super().__init__()
+        self.ui = Ui_MainWindow()
+        self.ui.setupUi(self)
+        self.show()
+
+        self.acceptDrops()
+        self.setWindowTitle("tela descanso")
+        self.setGeometry(10, 10, 702, 710)
+        self.label = QLabel(self)
+
+        self.pixmap = QPixmap("vectorpaint_(1).svg")
+        self.label.setPixmap(self.pixmap)
+        self.label.resize(self.pixmap.width(),
+                          self.pixmap.height())
+        self.show()
+
+if __name__ == '__main__':
+
+    app = QApplication()
+    main = MainWindow()
+    app.exec()
+_____________________________________________________________________
+
+from PySide6.QtCore import *
+from PySide6.QtGui import *
+from PySide6.QtWidgets import *
+import icons_rc
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        if not MainWindow.objectName():
+            MainWindow.setObjectName(u"MainWindow")
+        MainWindow.resize(1366, 783)
+        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget.setObjectName(u"centralwidget")
+        self.verticalLayout = QVBoxLayout(self.centralwidget)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.frame = QFrame(self.centralwidget)
+        self.frame.setObjectName(u"frame")
+        self.frame.setMinimumSize(QSize(0, 0))
+        self.frame.setStyleSheet(u"background:#064A80")
+        self.frame.setFrameShape(QFrame.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_2 = QHBoxLayout(self.frame)
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.frame_2 = QFrame(self.frame)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setMinimumSize(QSize(900, 745))
+        self.frame_2.setMaximumSize(QSize(16777215, 16777215))
+        self.frame_2.setStyleSheet(u"background:#006DAD")
+        self.frame_2.setFrameShape(QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Raised)
+        self.frame_4 = QFrame(self.frame_2)
+        self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setGeometry(QRect(10, 10, 880, 71))
+        self.frame_4.setMinimumSize(QSize(880, 71))
+        font = QFont()
+        font.setBold(True)
+        self.frame_4.setFont(font)
+        self.frame_4.setFocusPolicy(Qt.NoFocus)
+        self.frame_4.setLayoutDirection(Qt.LeftToRight)
+        self.frame_4.setStyleSheet(u"")
+        self.frame_4.setFrameShape(QFrame.StyledPanel)
+        self.frame_4.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_2 = QVBoxLayout(self.frame_4)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.label_2 = QLabel(self.frame_4)
+        self.label_2.setObjectName(u"label_2")
+        font1 = QFont()
+        font1.setFamilies([u"Aldrich"])
+        font1.setPointSize(26)
+        self.label_2.setFont(font1)
+        self.label_2.setStyleSheet(u"color:#FFF")
+        self.label_2.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_2.addWidget(self.label_2)
+
+        self.frame_5 = QFrame(self.frame_2)
+        self.frame_5.setObjectName(u"frame_5")
+        self.frame_5.setGeometry(QRect(10, 90, 880, 650))
+        self.frame_5.setMinimumSize(QSize(880, 650))
+        font2 = QFont()
+        font2.setFamilies([u"Aldrich"])
+        self.frame_5.setFont(font2)
+        self.frame_5.setStyleSheet(u"QLabel{border-radius: 40px; background-color:#fff; color:#000}\n""QLabel:hover{background-color:#F89633}")
+        self.frame_5.setFrameShape(QFrame.StyledPanel)
+        self.frame_5.setFrameShadow(QFrame.Raised)
+        self.gridLayout = QGridLayout(self.frame_5)
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.label_3 = QLabel(self.frame_5)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setMinimumSize(QSize(80, 80))
+        self.label_3.setMaximumSize(QSize(80, 80))
+        font3 = QFont()
+        font3.setFamilies([u"Aldrich"])
+        font3.setPointSize(7)
+        self.label_3.setFont(font3)
+        self.label_3.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_3, 0, 0, 1, 1)
+
+        self.label_4 = QLabel(self.frame_5)
+        self.label_4.setObjectName(u"label_4")
+        self.label_4.setMinimumSize(QSize(80, 80))
+        self.label_4.setMaximumSize(QSize(80, 80))
+        self.label_4.setFont(font3)
+        self.label_4.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_4, 0, 1, 1, 1)
+
+        self.label_5 = QLabel(self.frame_5)
+        self.label_5.setObjectName(u"label_5")
+        self.label_5.setMinimumSize(QSize(80, 80))
+        self.label_5.setMaximumSize(QSize(80, 80))
+        self.label_5.setFont(font3)
+        self.label_5.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_5, 0, 2, 1, 1)
+
+        self.label_6 = QLabel(self.frame_5)
+        self.label_6.setObjectName(u"label_6")
+        self.label_6.setMinimumSize(QSize(80, 80))
+        self.label_6.setMaximumSize(QSize(80, 80))
+        self.label_6.setFont(font3)
+        self.label_6.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_6, 0, 3, 1, 1)
+
+        self.label_7 = QLabel(self.frame_5)
+        self.label_7.setObjectName(u"label_7")
+        self.label_7.setMinimumSize(QSize(80, 80))
+        self.label_7.setMaximumSize(QSize(80, 80))
+        self.label_7.setFont(font3)
+        self.label_7.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_7, 0, 4, 1, 1)
+
+        self.label_8 = QLabel(self.frame_5)
+        self.label_8.setObjectName(u"label_8")
+        self.label_8.setMinimumSize(QSize(80, 80))
+        self.label_8.setMaximumSize(QSize(80, 80))
+        self.label_8.setFont(font3)
+        self.label_8.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_8, 0, 5, 1, 1)
+
+        self.label_9 = QLabel(self.frame_5)
+        self.label_9.setObjectName(u"label_9")
+        self.label_9.setMinimumSize(QSize(80, 80))
+        self.label_9.setMaximumSize(QSize(80, 80))
+        self.label_9.setFont(font3)
+        self.label_9.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_9, 1, 0, 1, 1)
+
+        self.label_10 = QLabel(self.frame_5)
+        self.label_10.setObjectName(u"label_10")
+        self.label_10.setMinimumSize(QSize(80, 80))
+        self.label_10.setMaximumSize(QSize(80, 80))
+        self.label_10.setFont(font3)
+        self.label_10.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_10, 1, 1, 1, 1)
+
+        self.label_11 = QLabel(self.frame_5)
+        self.label_11.setObjectName(u"label_11")
+        self.label_11.setMinimumSize(QSize(80, 80))
+        self.label_11.setMaximumSize(QSize(80, 80))
+        self.label_11.setFont(font3)
+        self.label_11.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_11, 1, 2, 1, 1)
+
+        self.label_12 = QLabel(self.frame_5)
+        self.label_12.setObjectName(u"label_12")
+        self.label_12.setMinimumSize(QSize(80, 80))
+        self.label_12.setMaximumSize(QSize(80, 80))
+        self.label_12.setFont(font3)
+        self.label_12.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_12, 1, 3, 1, 1)
+
+        self.label_13 = QLabel(self.frame_5)
+        self.label_13.setObjectName(u"label_13")
+        self.label_13.setMinimumSize(QSize(80, 80))
+        self.label_13.setMaximumSize(QSize(80, 80))
+        self.label_13.setFont(font3)
+        self.label_13.setLayoutDirection(Qt.LeftToRight)
+        self.label_13.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_13, 1, 4, 1, 1)
+
+        self.label_14 = QLabel(self.frame_5)
+        self.label_14.setObjectName(u"label_14")
+        self.label_14.setMinimumSize(QSize(80, 80))
+        self.label_14.setMaximumSize(QSize(80, 80))
+        self.label_14.setFont(font3)
+        self.label_14.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_14, 1, 5, 1, 1)
+
+        self.label_15 = QLabel(self.frame_5)
+        self.label_15.setObjectName(u"label_15")
+        self.label_15.setMinimumSize(QSize(80, 80))
+        self.label_15.setMaximumSize(QSize(80, 80))
+        self.label_15.setFont(font3)
+        self.label_15.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_15, 2, 0, 1, 1)
+
+        self.label_16 = QLabel(self.frame_5)
+        self.label_16.setObjectName(u"label_16")
+        self.label_16.setMinimumSize(QSize(80, 80))
+        self.label_16.setMaximumSize(QSize(80, 80))
+        self.label_16.setFont(font3)
+        self.label_16.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_16, 2, 1, 1, 1)
+
+        self.label_17 = QLabel(self.frame_5)
+        self.label_17.setObjectName(u"label_17")
+        self.label_17.setMinimumSize(QSize(80, 80))
+        self.label_17.setMaximumSize(QSize(80, 80))
+        self.label_17.setFont(font3)
+        self.label_17.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_17, 2, 2, 1, 1)
+
+        self.label_18 = QLabel(self.frame_5)
+        self.label_18.setObjectName(u"label_18")
+        self.label_18.setMinimumSize(QSize(80, 80))
+        self.label_18.setMaximumSize(QSize(80, 80))
+        self.label_18.setFont(font3)
+        self.label_18.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_18, 2, 3, 1, 1)
+
+        self.label_19 = QLabel(self.frame_5)
+        self.label_19.setObjectName(u"label_19")
+        self.label_19.setMinimumSize(QSize(80, 80))
+        self.label_19.setMaximumSize(QSize(80, 80))
+        self.label_19.setFont(font3)
+        self.label_19.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_19, 2, 4, 1, 1)
+
+        self.label_20 = QLabel(self.frame_5)
+        self.label_20.setObjectName(u"label_20")
+        self.label_20.setMinimumSize(QSize(80, 80))
+        self.label_20.setMaximumSize(QSize(80, 80))
+        self.label_20.setFont(font3)
+        self.label_20.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_20, 2, 5, 1, 1)
+
+        self.label_21 = QLabel(self.frame_5)
+        self.label_21.setObjectName(u"label_21")
+        self.label_21.setMinimumSize(QSize(80, 80))
+        self.label_21.setMaximumSize(QSize(80, 80))
+        self.label_21.setFont(font3)
+        self.label_21.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_21, 3, 0, 1, 1)
+
+        self.label_22 = QLabel(self.frame_5)
+        self.label_22.setObjectName(u"label_22")
+        self.label_22.setMinimumSize(QSize(80, 80))
+        self.label_22.setMaximumSize(QSize(80, 80))
+        self.label_22.setFont(font3)
+        self.label_22.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_22, 3, 1, 1, 1)
+
+        self.label_23 = QLabel(self.frame_5)
+        self.label_23.setObjectName(u"label_23")
+        self.label_23.setMinimumSize(QSize(80, 80))
+        self.label_23.setMaximumSize(QSize(80, 80))
+        self.label_23.setFont(font3)
+        self.label_23.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_23, 3, 2, 1, 1)
+
+        self.label_24 = QLabel(self.frame_5)
+        self.label_24.setObjectName(u"label_24")
+        self.label_24.setMinimumSize(QSize(80, 80))
+        self.label_24.setMaximumSize(QSize(80, 80))
+        self.label_24.setFont(font3)
+        self.label_24.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_24, 3, 3, 1, 1)
+
+        self.label_25 = QLabel(self.frame_5)
+        self.label_25.setObjectName(u"label_25")
+        self.label_25.setMinimumSize(QSize(80, 80))
+        self.label_25.setMaximumSize(QSize(80, 80))
+        self.label_25.setFont(font3)
+        self.label_25.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_25, 3, 4, 1, 1)
+
+        self.label_26 = QLabel(self.frame_5)
+        self.label_26.setObjectName(u"label_26")
+        self.label_26.setMinimumSize(QSize(80, 80))
+        self.label_26.setMaximumSize(QSize(80, 80))
+        self.label_26.setFont(font3)
+        self.label_26.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_26, 3, 5, 1, 1)
+
+        self.label_27 = QLabel(self.frame_5)
+        self.label_27.setObjectName(u"label_27")
+        self.label_27.setMinimumSize(QSize(80, 80))
+        self.label_27.setMaximumSize(QSize(80, 80))
+        self.label_27.setFont(font3)
+        self.label_27.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_27, 4, 0, 1, 1)
+
+        self.label_28 = QLabel(self.frame_5)
+        self.label_28.setObjectName(u"label_28")
+        self.label_28.setMinimumSize(QSize(80, 80))
+        self.label_28.setMaximumSize(QSize(80, 80))
+        self.label_28.setFont(font3)
+        self.label_28.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_28, 4, 1, 1, 1)
+
+        self.label_29 = QLabel(self.frame_5)
+        self.label_29.setObjectName(u"label_29")
+        self.label_29.setMinimumSize(QSize(80, 80))
+        self.label_29.setMaximumSize(QSize(80, 80))
+        self.label_29.setFont(font3)
+        self.label_29.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_29, 4, 2, 1, 1)
+
+        self.label_30 = QLabel(self.frame_5)
+        self.label_30.setObjectName(u"label_30")
+        self.label_30.setMinimumSize(QSize(80, 80))
+        self.label_30.setMaximumSize(QSize(80, 80))
+        self.label_30.setFont(font3)
+        self.label_30.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_30, 4, 3, 1, 1)
+
+        self.label_31 = QLabel(self.frame_5)
+        self.label_31.setObjectName(u"label_31")
+        self.label_31.setMinimumSize(QSize(80, 80))
+        self.label_31.setMaximumSize(QSize(80, 80))
+        self.label_31.setFont(font3)
+        self.label_31.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_31, 4, 4, 1, 1)
+
+        self.label_32 = QLabel(self.frame_5)
+        self.label_32.setObjectName(u"label_32")
+        self.label_32.setMinimumSize(QSize(80, 80))
+        self.label_32.setMaximumSize(QSize(80, 80))
+        self.label_32.setFont(font3)
+        self.label_32.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_32, 4, 5, 1, 1)
+
+        self.label_33 = QLabel(self.frame_5)
+        self.label_33.setObjectName(u"label_33")
+        self.label_33.setMinimumSize(QSize(80, 80))
+        self.label_33.setMaximumSize(QSize(80, 80))
+        self.label_33.setFont(font3)
+        self.label_33.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_33, 5, 0, 1, 1)
+
+        self.label_34 = QLabel(self.frame_5)
+        self.label_34.setObjectName(u"label_34")
+        self.label_34.setMinimumSize(QSize(80, 80))
+        self.label_34.setMaximumSize(QSize(80, 80))
+        self.label_34.setFont(font3)
+        self.label_34.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_34, 5, 1, 1, 1)
+
+        self.label_35 = QLabel(self.frame_5)
+        self.label_35.setObjectName(u"label_35")
+        self.label_35.setMinimumSize(QSize(80, 80))
+        self.label_35.setMaximumSize(QSize(80, 80))
+        self.label_35.setFont(font3)
+        self.label_35.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_35, 5, 2, 1, 1)
+
+        self.label_36 = QLabel(self.frame_5)
+        self.label_36.setObjectName(u"label_36")
+        self.label_36.setMinimumSize(QSize(80, 80))
+        self.label_36.setMaximumSize(QSize(80, 80))
+        self.label_36.setFont(font3)
+        self.label_36.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_36, 5, 3, 1, 1)
+
+        self.label_37 = QLabel(self.frame_5)
+        self.label_37.setObjectName(u"label_37")
+        self.label_37.setMinimumSize(QSize(80, 80))
+        self.label_37.setMaximumSize(QSize(80, 80))
+        self.label_37.setFont(font3)
+        self.label_37.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_37, 5, 4, 1, 1)
+
+        self.label_38 = QLabel(self.frame_5)
+        self.label_38.setObjectName(u"label_38")
+        self.label_38.setMinimumSize(QSize(80, 80))
+        self.label_38.setMaximumSize(QSize(80, 80))
+        self.label_38.setFont(font3)
+        self.label_38.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_38, 5, 5, 1, 1)
+
+        self.horizontalLayout_2.addWidget(self.frame_2)
+
+        self.frame_3 = QFrame(self.frame)
+        self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setMinimumSize(QSize(421, 745))
+        self.frame_3.setFont(font2)
+        self.frame_3.setFrameShape(QFrame.StyledPanel)
+        self.frame_3.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout = QHBoxLayout(self.frame_3)
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.label = QLabel(self.frame_3)
+        self.label.setObjectName(u"label")
+        self.label.setPixmap(QPixmap("icons_rc/vectorpaint_(1).svg"))
+        self.label.setAlignment(Qt.AlignCenter)
+        self.label.setMargin(0)
+        self.label.setIndent(-1)
+
+        self.horizontalLayout.addWidget(self.label)
+
+        self.horizontalLayout_2.addWidget(self.frame_3)
+
+        self.verticalLayout.addWidget(self.frame)
+
+        MainWindow.setCentralWidget(self.centralwidget)
+
+        self.retranslateUi(MainWindow)
+
+        QMetaObject.connectSlotsByName(MainWindow)
+    # setupUi
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"CHAVES", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Espa\u00e7o\n"
+"Converg\u00eancia", None))
+        self.label_4.setText(QCoreApplication.translate("MainWindow", u"100\n"
+"Asseio e \n"
+"Conserva\u00e7\u00e3o", None))
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"101\n"
+"Anatomia e \n"
+"Sa\u00fade", None))
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"102\n"
+"Anatomia e \n"
+"Sa\u00fade", None))
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"103\n"
+"Design de\n"
+"Interiores", None))
+        self.label_8.setText(QCoreApplication.translate("MainWindow", u"104\n"
+"Laborat\u00f3rio\n"
+"de Beleza I", None))
+        self.label_9.setText(QCoreApplication.translate("MainWindow", u"105\n"
+"Laborat\u00f3rio\n"
+"de Beleza II", None))
+        self.label_10.setText(QCoreApplication.translate("MainWindow", u"106\n"
+"Laborat\u00f3rio\n"
+"Multidisciplinar I\n"
+"(Farm\u00e1cia)", None))
+        self.label_11.setText(QCoreApplication.translate("MainWindow", u"107\n"
+"Laborat\u00f3rio \n"
+"de Est\u00e9tica I\n"
+"(Podologia)", None))
+        self.label_12.setText(QCoreApplication.translate("MainWindow", u"108\n"
+"Laborat\u00f3rio\n"
+"de Est\u00e9tica II", None))
+        self.label_13.setText(QCoreApplication.translate("MainWindow", u"109\n"
+"Laborat\u00f3rio\n"
+"Multidisciplinar II\n"
+"(Analises \n"
+"Clinicas)", None))
+        self.label_14.setText(QCoreApplication.translate("MainWindow", u"110\n"
+"Tecnologia da\n"
+"Informa\u00e7\u00e3o", None))
+        self.label_15.setText(QCoreApplication.translate("MainWindow", u"201\n"
+"Mini\n"
+"Mercado", None))
+        self.label_16.setText(QCoreApplication.translate("MainWindow", u"202\n"
+"Loja \n"
+"Concei\u00e7\u00e3o", None))
+        self.label_17.setText(QCoreApplication.translate("MainWindow", u"203\n"
+"Espa\u00e7o \n"
+"Empresarial", None))
+        self.label_18.setText(QCoreApplication.translate("MainWindow", u"204\n"
+"Sala", None))
+        self.label_19.setText(QCoreApplication.translate("MainWindow", u"205\n"
+"Sala", None))
+        self.label_20.setText(QCoreApplication.translate("MainWindow", u"206\n"
+"Sala", None))
+        self.label_21.setText(QCoreApplication.translate("MainWindow", u"207\n"
+"Sala\n"
+"Multiuso", None))
+        self.label_22.setText(QCoreApplication.translate("MainWindow", u"208\n"
+"Tecnologia da\n"
+"Informa\u00e7\u00e3o", None))
+        self.label_23.setText(QCoreApplication.translate("MainWindow", u"209\n"
+"Tecnologia da\n"
+"Informa\u00e7\u00e3o", None))
+        self.label_24.setText(QCoreApplication.translate("MainWindow", u"210\n"
+"Estudio \n"
+"Maker", None))
+        self.label_25.setText(QCoreApplication.translate("MainWindow", u"211\n"
+"Sala\n"
+"Multiuso", None))
+        self.label_26.setText(QCoreApplication.translate("MainWindow", u"212\n"
+"Sala\n"
+"Multiuso", None))
+        self.label_27.setText(QCoreApplication.translate("MainWindow", u"213\n"
+"Sala\n"
+"Multiuso", None))
+        self.label_28.setText(QCoreApplication.translate("MainWindow", u"301\n"
+"Tecnologia da \n"
+"Informa\u00e7\u00e3o", None))
+        self.label_29.setText(QCoreApplication.translate("MainWindow", u"302\n"
+"Tecnologia da \n"
+"Informa\u00e7\u00e3o", None))
+        self.label_30.setText(QCoreApplication.translate("MainWindow", u"303\n"
+"Tecnologia da \n"
+"Informa\u00e7\u00e3o", None))
+        self.label_31.setText(QCoreApplication.translate("MainWindow", u"304\n"
+"Multiuso", None))
+        self.label_32.setText(QCoreApplication.translate("MainWindow", u"305\n"
+"Multiuso", None))
+        self.label_33.setText(QCoreApplication.translate("MainWindow", u"306\n"
+"Sala de\n"
+"Jogos", None))
+        self.label_34.setText(QCoreApplication.translate("MainWindow", u"307\n"
+"Manuten\u00e7\u00e3o\n"
+"e Redes de\n"
+"Computadores", None))
+        self.label_35.setText(QCoreApplication.translate("MainWindow", u"308\n"
+"Biblioteca", None))
+        self.label_36.setText(QCoreApplication.translate("MainWindow", u"309\n"
+"Biblioteca", None))
+        self.label_37.setText(QCoreApplication.translate("MainWindow", u"310\n"
+"Computa\u00e7\u00e3o\n"
+"Grafica", None))
+        self.label_38.setText(QCoreApplication.translate("MainWindow", u"311\n"
+"Microsoft", None))
+        self.label.setText("")
+    # retranslateUi
